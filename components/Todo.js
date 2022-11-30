@@ -2,7 +2,6 @@ import {React, useEffect, useState} from "react";
 import styles from "../styles/Home.module.css";
 import TodoItem from "./TodoItem";
 import newData from "../pages/api/newData";
-// import Card from "./Card"
 import Tot from './Tot';
 
 
@@ -56,6 +55,7 @@ useEffect(() => {
             <div className={styles.semi}>
                 <input
                 type="text"
+                placeholder="Enter Todo Here"
                 value={newTodo}
                 onChange={(e)=>handleInput(e)}
                 ></input>
@@ -70,14 +70,6 @@ useEffect(() => {
                     <TodoItem key={todo.ref["@ref"].id} todo={todo}/>
                 ))
             }
-            {/* {
-                    <Card todo={data}/>
-            } */}
-            {/* {
-                data && data.map((todo) => (
-                    <Card key={todo.ref["@ref"].id} todo={todo}/>
-                ))
-            } */}
         </div>
         <div className={styles.tot}>
             {

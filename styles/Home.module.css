@@ -89,3 +89,17 @@
 .tot{
 	padding-top: 2%;
 }
+.comp{
+	color: green;
+	background: none;
+}
+.incomp{
+	color: red;
+	background: none;
+}
+.spa{
+	padding-top: 2%;
+}
+.bot{
+	padding-bottom: 10%;
+}

@@ -13,7 +13,7 @@ function TodoItem(todo){
     const [inputData, setInputData] = useState({});
     let d = "";
     const handleCheck = async() => {
-        console.log(">>>>>>>>>ischecked??",isChecked);
+        console.log(">>>>>>>>>ischecked??", isChecked);
         isDone(!todo.todo.data.done)
         let c = !todo.todo.data.done;
         isDeleted(todo.todo.ref["@ref"].id)
@@ -49,7 +49,7 @@ function TodoItem(todo){
         })
     }
 
-    useEffect(()=>{},[todo])
+    useEffect(()=>{},[todo, isChecked])
     return(
         <>
         <ToastContainer/>
@@ -74,7 +74,9 @@ function TodoItem(todo){
                         onClick={()=>setisChecked(!isChecked)}
                     />
                     <button onClick={handleDelete}> Delete </button>
-                    {/* {todo.todo.data.done == true ? <div>(Task Completed!!)</div> : <div>TO DO</div>} */}
+                </div>
+                <div className={styles.spa}>
+                    {todo.todo.data.done == true ? <div className={styles.comp}>Task {todo.todo.data.task} Completed!!</div> : <div className={styles.incomp}>Task {todo.todo.data.task} Remaining</div>}
                 </div>
             </span>
         </div>

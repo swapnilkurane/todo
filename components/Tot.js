@@ -1,12 +1,10 @@
-
+import styles from "../styles/Home.module.css"
 
 function Tot(data) {
-    console.log("myman>>", data)
     return(
-        <div>
+        <div className={styles.bot}>
             The total number of Todos listed are: {data.todo.length}
         </div>
     )
-
 }
 export default Tot;

@@ -1,6 +1,6 @@
 const { Ref } = require("faunadb");
 const faunadb = require("faunadb");
-const secret = "fnAE025odWACSUSZx5EtkYPHu1IHGD3xeaBARTMW"
+const secret = "secret"
 const q = faunadb.query;
 const client =  new faunadb.Client({
     secret,
